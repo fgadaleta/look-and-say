@@ -78,6 +78,10 @@ pub fn look_and_say(input: Vec<i32>, iter: u32) -> Vec<i32> {
 
 fn main() {
     println!("Calculating look numbers");
-    let series = look_and_say(vec![1, 1], 25);
-    println!("{:?}", series);
+    let series = look_and_say(vec![1, 1], 60);
+
+    for i in 1..series.len() {
+        println!("{} {}", i, series[i] as f32 / series[i-1] as f32);
+    }
+
 }
